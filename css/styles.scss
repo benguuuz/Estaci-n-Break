@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  .contenedor {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .banner {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    padding-bottom: 15px;
+
+    &__fondo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    &__overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: rgb(255, 255, 255);
+      padding: 10px;
+    }
+
+    &__icono {
+      width: 60px;
+      margin-bottom: 10px;
+      border-radius: 50px;
+      border-color: black;
+    }
+
+    &__titulo {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    &__info {
+      font-size: 16px;
+      opacity: 0.8;
+      margin-top: 5px;
+    }
+  }
+  .menu-toggle {
+    display: flex;
+    background-color: #e0e0e0;
+    border-radius: 999px;
+    overflow: hidden;
+    width: fit-content;
+    margin: 0 auto 15px;
+
+    .toggle-btn {
+      padding: 10px 30px;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      font-weight: bold;
+      color: #000000;
+      transition: background-color 0.3s, color 0.3s;
+
+      &.active {
+        background-color: #3f2514;
+        color: white;
+      }
+    }
+  }
+
+  .categorias-scroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    padding: 1px 15px 10px; // más espacio táctil
+    margin-bottom: 15px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+
+    a {
+      white-space: nowrap;
+      text-decoration: none;
+      color: #3f2514;
+      font-size: 14px;
+      flex: 0 0 auto;
+      padding: 8px 12px; // mejora área clickeable
+      background-color: #f5f5f5; // opcional: estilo tipo "pill"
+      border-radius: 999px; // opcional: estilo redondeado
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .menu-seccion {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+
+    .titulo {
+      color: #3f2514;
+      margin-bottom: 5px;
+      margin-top: 5px;
+    }
+
+    .all_productos {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      .producto {
+        width: 100%;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        box-shadow: 0 4px 8px rgba(0.1, 0.1, 0.1, 0.1);
+        border-radius: 5px;
+        margin: 10px;
+        background-color: #b9b4b015;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        cursor: pointer;
+
+        h1 {
+          font-size: 20px;
+          color: #3f2514;
+        }
+
+        p {
+          font-size: 15px;
+          color: #bd9d44;
+        }
+
+        h4 {
+          margin-top: 8px;
+          color: #3f2514;
+          font-size: 15px;
+        }
+
+        img {
+          width: 100px;
+          border-radius: 10px;
+        }
+        @media (min-width: 740px) {
+          width: 350px;
+        }
+      }
+    }
+
+    &.hidden {
+      display: none;
+    }
+  }
+
+  .hidden {
+    display: none;
+  }
+}
