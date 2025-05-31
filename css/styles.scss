@@ -137,28 +137,34 @@
       flex-wrap: wrap;
 
       .producto {
-        width: 100%;
+        width: 350px;
         height: 150px;
         display: flex;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: space-between;
         box-shadow: 0 4px 8px rgba(0.1, 0.1, 0.1, 0.1);
         border-radius: 5px;
-        margin: 10px;
+        padding: 10px;
         background-color: #b9b4b015;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         cursor: pointer;
 
+        .bloque {
+          display: flex;
+          align-items: start;
+          flex-direction: column;
+          width:300px;
+        }
         h1 {
           font-size: 17px;
           color: #3f2514;
-          width: 250px;
+          width: 100%;
         }
 
         p {
           font-size: 15px;
           color: #bd9d44;
-          width: 250px;
+          width: 100%;
         }
 
         h4 {
@@ -169,6 +175,7 @@
 
         img {
           width: 100px;
+          margin-left: 11px;
           border-radius: 10px;
         }
         @media (min-width: 740px) {
