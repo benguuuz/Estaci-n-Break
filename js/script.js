@@ -3,6 +3,7 @@ const sections = document.querySelectorAll('.menu-seccion');
 const categoriasComida = document.getElementById('categorias-comida');
 const categoriasBarra = document.getElementById('categorias-barra');
 
+// Alternar entre Cocina y Barra
 buttons.forEach(btn => {
   btn.addEventListener('click', () => {
     // Toggle botón activo
@@ -25,3 +26,6 @@ buttons.forEach(btn => {
     }
   });
 });
+
+
+
